@@ -1,116 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.css"
+    integrity="sha512-xWIcG98IArXxegzS8Vo9iYMKuPgbXOG8O1mlHrj4MmNFxsBDltGxHJGg4JK80MVEmLRpdbWtphhm+S6Wx9o73g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .fa-solid {
+      color: yellow;
+    }
+    header {
+      background: rgb(8, 8, 62);
+      padding: 5px;
+      margin: auto;
+      color: aliceblue;
+      font-size: smaller;
 
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      @media screen and (min-width: 780px){
+        background: rgb(8, 8, 62);
+      }
+    }
+    .loc {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .phone {
+      display: inline-block;
+      margin-left: 60px;
     }
 
-    body{
-        background: rgb(134, 108, 108);
+    .time {
+      display: inline-block;
+      margin-left: 600px;
     }
 
-    .container{
-        width: 90%;
-        max-width:1000px; 
-        display: flex;
-        margin: 20px auto;
-        gap:5px;
-        flex-wrap: wrap;
+    img {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0.8;
     }
-
-    .container .holder{
-        width: 90%;
-        max-width: 380px; /* ask what is the function of this line of code*/
-        margin: auto;
-    }
-
-
-    .box{
-        background: white;
-        margin: 15px;
-        border: 0;
-        width: 200px;
-        height: 200px;
-        border-radius: 5px;
-        &:hover{
-            transform:scale(0.98);
-            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.396);
-        }
-
-    }
-</style>
-<body>
-    <section class=" container">
-        
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <div class=" box">
-                Lorem ipsum dolor sit amet.
-            </div>
-    </section>
     
-    <h1></h1>
-</body>
+    .sub-header{
+      background: rgba(229, 222, 222, 0.397);
+      margin: 10.5px;
+      width: 100%;
+      position: absolute;
+      top:15px;
+      padding: 10px;
+    }
+
+    .body{
+      position: absolute;
+      top: 120px
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="header-design">
+        <div class="loc">
+          <i class="fa-solid fa-location-dot"></i>1610 Awolowo, New York, N7
+          100118 US.
+        </div>
+        <div class="phone">
+          <i class="fa-solid fa-phone"></i> 212 336 55575, 212 386 5576
+        </div>
+
+        <div class="time">
+          <i class="fa-solid fa-phone"></i> Mon Sart, 8.00, Sunday CLOSED
+        </div>
+      </div>
+    </header>
+
+
+    <div class="container">
+      <div class="image">
+        <img src="office-teamwork.jpg" alt="" />
+      </div>
+
+      <div class="sub-header"> <a href=" Home"> Home</a>  <a href="Docs "> Docs </a>  <a href="Contacts ">Contacts </a>  <a href="Elements ">Elements</a> <a href=" News"> News</a> <a href=" Page">Page</a> </div>
+   
+    </div>
+
+    <div class="body">
+      <h1>Inspiring Young Leaders</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda
+        aliquam maxime.
+      </p>
+    </div>
+  </body>
 </html>
