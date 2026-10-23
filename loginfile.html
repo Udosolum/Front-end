@@ -94,14 +94,14 @@
         <div id="message"> </div>
         <div class="d-none npass">
             <span class="fs-sm"> New password </span>
-            <input type="text" class="border-0 rounded p-2 w-100 " id=" newpass">
+            <input type="text" class="border-0 rounded p-2 w-100 " id="newpass">
             <br>
             <span class="fs-sm"> Confirm Password </span>
             <input type="text" class="border-0 rounded p-2 w-100 " id="conpass">
         </div>
         
 
-        <div class="button text-center"><button class="border-0 rounded p-3 button-d w-50"  type="submit" onclick="checkPass()"> Sign in Now</button></div>
+        <div class="button text-center"><button class="border-0 rounded p-3 button-d w-50"  type="submit" onclick="checkPass()" id="signinButton"> Sign in Now</button></div>
         <div class=" text-center"> By clicking on "Sign in Now" you agree to <a href=""> Terms of service| Privacy policy</a></div>
 
         
@@ -141,22 +141,27 @@
         let newPass = document.querySelector(".npass")
         newPass.className = " npass"
 
-      let conpass = documment.querySelector("#conpass").value
-      let newpass = documment.querySelector("#newpass").value
+    
 
-        
-
-        if(conpass != newpass && checkpass()){
-        Swal.fire({
-            icon: "error",
-            title: "PASSWORDS DO NOT MATCH",
-            text: "Please enter the same password in both fields.",
-            confirmButtonText: "Try Again"
-        });
-      
-        }
-      
     }
+
+    function checkpass2(){  
+      let conpass = document.querySelector("#conpass").value
+      let newpass = document.querySelector("#newpass").value  
+      if(conpass != newpass){
+          Swal.fire({
+              icon: "error",
+              title: "PASSWORDS DO NOT MATCH",
+              text: "Please enter the same password in both fields.",
+              confirmButtonText: "Try Again"
+          });
+        
+          }
+    }
+      
+    
+
+  document.querySelector('#signinButton').addEventListener("click", checkpass2)
     
     
   </script>
