@@ -33,6 +33,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <body>
     <style>
       * {
@@ -85,17 +86,18 @@
             <span class="fs-sm">Email Address </span> 
             <input type="text"placeholder="    *****@gmail.com"class="border-0 rounded p-2 w-100 email" />
         </div>
-        <div class="">
+        <div class="" id="password">
             <span class="fs-sm pass">Enter your password </span> <br />
             <input type="text" class="border-0 rounded p-2 w-100 " id="pass" />
             <button type="button" class="btn btn-link" onclick="showNewPass()">Forgot Password?</button>
         </div>
+        <div id="message"> </div>
         <div class="d-none npass">
             <span class="fs-sm"> New password </span>
-            <input type="text" class="border-0 rounded p-2 w-100 ">
+            <input type="text" class="border-0 rounded p-2 w-100 " id=" newpass">
             <br>
             <span class="fs-sm"> Confirm Password </span>
-            <input type="text" class="border-0 rounded p-2 w-100 ">
+            <input type="text" class="border-0 rounded p-2 w-100 " id="conpass">
         </div>
         
 
@@ -118,13 +120,44 @@
             label.textContent = ` Please enter correct password`
             label.style.color = "red"
         }
+        
 
+    }
+
+    function otpGen(){
+      let otp = Math.floor( 1000 + (Math.random() * 9999))
+      document.querySelector("#message").innerHTML = `
+      <div class="alert alert-success" role="alert">
+  Your OTP is ${otp}
+</div>`
+      return otp
     }
 
     function showNewPass(){
+
+
+      hidePass = document.querySelector("#password")
+      hidePass.className = "d-none"
         let newPass = document.querySelector(".npass")
         newPass.className = " npass"
 
+      let conpass = documment.querySelector("#conpass").value
+      let newpass = documment.querySelector("#newpass").value
+
+        
+
+        if(conpass != newpass && checkpass()){
+        Swal.fire({
+            icon: "error",
+            title: "PASSWORDS DO NOT MATCH",
+            text: "Please enter the same password in both fields.",
+            confirmButtonText: "Try Again"
+        });
+      
+        }
+      
     }
+    
+    
   </script>
 </html>
